@@ -1,78 +1,63 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class program9 extends JFrame {
-
+public class program9 {
     private JTextField textField1, textField2, textField3;
 
-    public program9() {
-        // Set up the frame
-        setTitle("Number Input App");
-        setSize(400, 200);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            program9 app = new program9();
+            app.createAndShowGUI();
+        });
+    }
 
-        // Create the components
+    private void createAndShowGUI() {
+        JFrame frame = new JFrame("Number Calculation");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+
         textField1 = new JTextField(10);
         textField2 = new JTextField(10);
         textField3 = new JTextField(10);
 
-        JLabel label1 = new JLabel("Number 1:");
-        JLabel label2 = new JLabel("Number 2:");
-        JLabel label3 = new JLabel("Number 3:");
-
         JButton calculateButton = new JButton("Calculate");
-        calculateButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                calculateAndDisplay();
-            }
-        });
+        calculateButton.addActionListener(new CalculateButtonListener());
 
-        // Set up the layout
-        setLayout(new GridLayout(4, 2));
+        panel.add(new JLabel("Number 1:"));
+        panel.add(textField1);
+        panel.add(new JLabel("Number 2:"));
+        panel.add(textField2);
+        panel.add(new JLabel("Number 3:"));
+        panel.add(textField3);
+        panel.add(calculateButton);
 
-        // Add components to the frame
-        add(label1);
-        add(textField1);
-        add(label2);
-        add(textField2);
-        add(label3);
-        add(textField3);
-        add(new JLabel()); // Empty label for spacing
-        add(calculateButton);
-
-        setLocationRelativeTo(null);
-        setVisible(true);
+        frame.getContentPane().add(panel);
+        frame.setSize(300, 200);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 
-    private void calculateAndDisplay() {
-        try {
-            // Get input values
-            double num1 = Double.parseDouble(textField1.getText());
-            double num2 = Double.parseDouble(textField2.getText());
-            double num3 = Double.parseDouble(textField3.getText());
+    private class CalculateButtonListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            try {
+                double num1 = Double.parseDouble(textField1.getText());
+                double num2 = Double.parseDouble(textField2.getText());
+                double num3 = Double.parseDouble(textField3.getText());
 
-            // Calculate sum, average, and largest
-            double sum = num1 + num2 + num3;
-            double average = sum / 3;
-            double largest = Math.max(Math.max(num1, num2), num3);
+                double sum = num1 + num2 + num3;
+                double average = sum / 3;
+                double max = Math.max(Math.max(num1, num2), num3);
 
-            // Display the results in a dialog box
-            String resultMessage = String.format("Sum: %.2f\nAverage: %.2f\nLargest: %.2f", sum, average, largest);
-            JOptionPane.showMessageDialog(this, resultMessage, "Results", JOptionPane.INFORMATION_MESSAGE);
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Please enter valid numbers", "Error", JOptionPane.ERROR_MESSAGE);
+                String resultMessage = String.format("Sum: %.2f\nAverage: %.2f\nLargest: %.2f", sum, average, max);
+
+                JOptionPane.showMessageDialog(null, resultMessage, "Result", JOptionPane.INFORMATION_MESSAGE);
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(null, "Please enter valid floating-point numbers.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
         }
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new program9();
-            }
-        });
     }
 }

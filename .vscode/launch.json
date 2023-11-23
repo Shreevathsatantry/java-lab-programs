@@ -1,0 +1,171 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "NumberCalculationApp",
+      "request": "launch",
+      "mainClass": "NumberCalculationApp",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "withtryandcatch",
+      "request": "launch",
+      "mainClass": "withtryandcatch",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "pro5",
+      "request": "launch",
+      "mainClass": "pro5",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "program4",
+      "request": "launch",
+      "mainClass": "program4",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "pr",
+      "request": "launch",
+      "mainClass": "pr",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "p",
+      "request": "launch",
+      "mainClass": "p",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "program10",
+      "request": "launch",
+      "mainClass": "program10",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "program9",
+      "request": "launch",
+      "mainClass": "program9",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "program7",
+      "request": "launch",
+      "mainClass": "program7",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "program82",
+      "request": "launch",
+      "mainClass": "program82",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "SynchronizationExample",
+      "request": "launch",
+      "mainClass": "SynchronizationExample",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "program8",
+      "request": "launch",
+      "mainClass": "program8",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "program6",
+      "request": "launch",
+      "mainClass": "program6",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "tryprogram",
+      "request": "launch",
+      "mainClass": "tryprogram",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "program5practice",
+      "request": "launch",
+      "mainClass": "program5practice",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "program5",
+      "request": "launch",
+      "mainClass": "program5",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "program2pactice",
+      "request": "launch",
+      "mainClass": "program2pactice",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "program2",
+      "request": "launch",
+      "mainClass": "program2",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "program1practice",
+      "request": "launch",
+      "mainClass": "program1practice",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "program1",
+      "request": "launch",
+      "mainClass": "program1",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "type": "java",
+      "name": "StudentTest",
+      "request": "launch",
+      "mainClass": "StudentTest",
+      "projectName": "lab_part_A_c8c5b29f"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/shree/Desktop/JAVA/java lab programs/lab_part_A",
+      "program": "c:/Users/shree/Desktop/JAVA/java lab programs/lab_part_A/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
